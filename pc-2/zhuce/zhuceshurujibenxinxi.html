@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/zhu.css" />
+		<script type="text/javascript" src="js/jquery-1.12.0.js" ></script>
+		<script type="text/javascript" src="js/jquery.nicescroll.js" ></script>
+	</head>
+	<style>
+		.select1,.select2 {
+			/*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+			border: solid 1px #000;
+
+			/*很关键：将默认的select选择框样式清除*/
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+
+			/*在选择框的最右侧中间显示小箭头图片*/
+			background: url("img/ssa9.png") no-repeat scroll 295px center transparent;
+
+			background-size: 
+			/*为下拉小箭头留出一点位置，避免被文字覆盖*/
+			padding-right: 14px;
+        }
+
+
+		/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+		.select1::-ms-expand,.select2::-ms-expand { display: none; }
+		.jiaa{
+			color:black !important; 
+		}
+		.ssxue{
+			/*scrollbar-arrow-color: #240024;*/
+		}
+		.ssxue span{
+			cursor:pointer;
+			padding:5px 18px;
+			margin:2.5px 3px;
+			display:inline-block;
+			background:#f2f2f2;color:#999999;  
+		}
+		.ssxueliang{
+			background:#35a554 !important;
+			color:#fff !important;	
+		}
+	</style>
+	<body>
+		<div class="head">
+			<div class="hhtou">
+				<a  class="logo" href="../shoye/index.html"><img src="img/ssa1.png" style="display:inline-block;vertical-align:middle;width:232px;height:53px;   "/></a>
+				<div style="border-left:1px solid #fff;float:left;width:1px;height:38px;position:relative;top:22px;margin-right:25px;     "></div>
+				<span style="font-size:24px;position:relative;top:22px;float:left;  ">注册</span>
+			</div>
+		</div>
+		<div class="zhuti">
+			<div style="width:1190px;height:510px;margin:0 auto;position:relative; ">
+				<img src="img/ssa2.png" style="width:616px;height:412px;position: absolute;left:0px;top:50px;"/>
+				<div style="width:380px;height:560px;background:#fff;position:absolute;right:0px;top:-25px;border:1px solid #999999;color: #999999;font-size:14px;     ">
+					<div style="height:55px;width:315px;line-height:55px;text-align: center;border-bottom:1px solid #35a554;margin:0 auto;    ">
+						<span style="color:#333333;font-size:18px;  ">输入基本信息</span>
+					</div>
+					<div style="position:relative;width:317px;margin:21px auto 0 auto;  ">
+						<input type="text" placeholder="请输入您的姓名" style="height:40px;width:315px;border:1px solid #999999;text-indent: 2.5em;cursor: pointer;   "/>
+						<img src="img/ssa3.png" style="width:15px;height:16px;position: absolute;left:10px;top:13px;"/>
+					</div>
+					<div style="position:relative;width:317px;margin:20px auto 0 auto;  ">
+						<input type="text" placeholder="请设置您的密码" style="height:40px;width:315px;border:1px solid #999999;text-indent: 2.5em;cursor: pointer;   "/>
+						<img src="img/ssa4.png" style="width:15px;height:16px;position: absolute;left:10px;top:13px;"/>
+					</div>
+					<div style="position:relative;width:317px;margin:20px auto 0 auto;  ">
+						<input type="text" placeholder="请确认您的密码" style="height:40px;width:315px;border:1px solid #999999;text-indent: 2.5em;cursor: pointer;   "/>
+						<img src="img/ssa4.png" style="width:15px;height:16px;position: absolute;left:10px;top:13px;"/>
+					</div>
+					<div style="position:relative;width:317px;margin:20px auto 0 auto;  ">
+						<select style="height:40px;width:317px;border:1px solid #999999;padding-left:33px;cursor: pointer; font-family:'microsoft yahei';color:#999999;      " class="select1">  
+					    	<option >请选择教学点</option>  
+					      	<option >广东</option>  
+					        <option >深圳</option>  
+					        <option >厦门</option>  
+                        </select>  
+						<img src="img/ssa8.png" style="width:15px;height:18px;position: absolute;left:10px;top:13px;"/>
+					</div>
+					<div style="position:relative;width:317px;margin:20px auto 0 auto;  ">
+						<select style="height:40px;width:317px;border:1px solid #999999;padding-left:33px;cursor: pointer; font-family:'microsoft yahei';color:#999999;      " class="select2">  
+					    	<option >请选择感兴趣的学段</option>  
+					      	<option >小学</option>  
+					        <option >初中</option>  
+					        <option >高中</option>  
+                        </select>  
+						<img src="img/ssa10.png" style="width:19px;height:18px;position: absolute;left:10px;top:10px;"/>
+					</div>
+					<div style="width:295px;margin:20px auto 0 auto;border:1px solid #999999; padding:5px 10px;height:68px;overflow:hidden;" class="ssxue">
+						<span  class="ssxueliang">语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+						<span>语文</span>
+					</div>
+					<div style="width:317px;margin:0 auto;height:41px;line-height:41px;text-align:center;     ">
+						<a style="font-size: 14px;color:#0984f6;cursor:pointer;  " href="denglu.html">
+						已有账号？请直接登录
+						</a>
+					</div>
+					<div style="position:relative;width:317px;margin:0 auto;   ">
+						<a style="display:inline-block;width:315px;height: 45px;font-size: 18px;color:#fff;line-height:45px;text-align:center; background:#35a554;     " href="shurujibenxixi.html">
+						提交
+						</a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div style="width:860px;margin:0 auto;color:#aaaaaa;font-size:12px;   ">© 2016 考拉超级课堂&深圳市考拉超课科技股份有限公司 版权所有 粤ICP备12081495号 增值业务经营许可证：粤B2-20100246 教育部软件工程实习实训基地</div>
+	<script type="text/javascript">
+		$(".ssxue").niceScroll({  
+			cursorcolor:"#35a554",  
+			cursoropacitymax:1,  
+			touchbehavior:false,  
+			cursorwidth:"5px",  
+			cursorborder:"0",  
+			cursorborderradius:"5px" ,
+
+		}); 
+	</script>	
+	<script>
+		$(function() {
+			$(".select1").click(function(){
+                if($(this).hasClass("jiaa")){
+					$(this).removeClass("jiaa");
+				}
+				else{
+					if($(this).val()!="请选择教学点"){
+						$(this).addClass("jiaa");
+					}
+					else{
+						$(this).removeClass("jiaa");
+					}	
+				}
+            });	
+            $(".select2").click(function(){
+                if($(this).hasClass("jiaa")){
+					$(this).removeClass("jiaa");
+				}
+				else{
+					if($(this).val()!="请选择感兴趣的学段"){
+						$(this).addClass("jiaa");
+					}
+					else{
+						$(this).removeClass("jiaa");
+					}	
+				}
+            });	
+            $(".ssxue span").click(function(){
+                if($(this).hasClass("ssxueliang")){
+					$(this).removeClass("ssxueliang");
+				}
+				else{	
+					$(this).addClass("ssxueliang");		
+				}
+            });	
+		});
+	</script>
+	</body>
+</html>
